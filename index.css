@@ -1,0 +1,66 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root
+{
+    --background: #141414;
+    --primary: #303030;
+    --secondary: #8C8C8C;
+    --accent: #00DC97;
+}
+
+body
+{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    background-color: var(--background);
+}
+
+.container
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y proximity;
+
+}
+
+.sekcija
+{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding: 2em;
+}
+
+.container h1
+{
+    margin: 0px;
+    font-size: 5em;
+}
+
+#frontpage
+{
+    align-items: center;
+    justify-content: start;
+    margin: 0em 3em;
+    text-align: start;
+}
+
+.container h1.mainheading
+{
+    font-size: 8em;
+}
+
+/* ako je ovo u dokumentu znaci da znan commitati ili kako se to vec zove */
