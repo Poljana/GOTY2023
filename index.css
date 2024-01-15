@@ -39,28 +39,87 @@ body
     height: 100vh;
     scroll-snap-align: start;
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: start;
-    padding: 2em;
+    position: relative;
 }
 
 .container h1
 {
     margin: 0px;
     font-size: 5em;
+    position: absolute;
+    left: 2em;
+    top: 0.25em;
 }
+
+
+/*            NASLOVNICA             */
+
 
 #frontpage
 {
     align-items: center;
     justify-content: start;
-    margin: 0em 3em;
     text-align: start;
 }
 
 .container h1.mainheading
 {
-    font-size: 8em;
+    font-size: 7em;
+    left: 0.5em;
+    top: 40%;
+    translate: 0 -50%;
 }
 
-/* ako je ovo u dokumentu znaci da znan commitati ili kako se to vec zove */
+#GOTYlogo
+{
+    transform: scale(0.35);
+    filter: invert(80%);
+    position: absolute;
+    top: 40%;
+    right: -15em;
+    translate: 0 -50%;
+}
+
+#highlight
+{
+    width: 100vw;
+    height: 10em;
+    background: linear-gradient( #141414 0%,#00DC97);
+    position: absolute;
+    z-index: -1;
+}
+
+@keyframes slide {
+    from 
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(-100%);
+    }
+}
+
+.imageslider
+{
+    width: 100vw;
+    height: 15em;
+    background: var(--background);
+    translate: 0 85%;
+    display: inline-block;
+    gap: 0.5em;
+    /* animation: 35s slide infinite linear; */
+    white-space: nowrap;
+}
+
+.imageslider img
+{
+    width: 17em;
+    height: 15em;
+    object-fit: cover;
+    filter: grayscale(70%);
+}
+
+
