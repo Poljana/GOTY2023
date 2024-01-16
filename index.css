@@ -6,7 +6,7 @@
     --background: #141414;
     --primary: #303030;
     --secondary: #8C8C8C;
-    --accent: #00DC97;
+    --accent: #FF8BA6;
 }
 
 body
@@ -15,7 +15,7 @@ body
     padding: 0px;
     width: 100vw;
     height: 100vh;
-    color: #ffffff;
+    color: #fffafa;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     background-color: var(--background);
@@ -27,17 +27,13 @@ body
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-y: scroll;
     overflow-x: hidden;
-    scroll-snap-type: y proximity;
-
 }
 
 .sekcija
 {
     width: 100vw;
     height: 100vh;
-    scroll-snap-align: start;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -53,6 +49,69 @@ body
     top: 0.25em;
 }
 
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+}
+
+
+
+
+/*              HEADER                */
+
+
+header
+{
+    width: 100vw;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: var(--primary);
+}
+
+#GOTYlogo
+{
+    transform: scale(0.2);
+    filter: invert(100%);
+    translate: -35% 0;
+}
+
+.navbar
+{
+    display: flex;
+    align-items: center;
+    width: 20em;
+    height: 2em;
+    gap: 2em;
+    font-size: 1.5em;
+    translate: 70%;
+}
+
+.navbar a
+{
+    color: #fffafa;
+    width: 3em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    transition-property: all;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+
+.navbar a:hover
+{
+    color: #ffc2d0;
+}
+
+
 
 /*            NASLOVNICA             */
 
@@ -66,19 +125,10 @@ body
 
 .container h1.mainheading
 {
-    font-size: 7em;
+    font-size: 5em;
+    width: 60%;
     left: 0.5em;
-    top: 40%;
-    translate: 0 -50%;
-}
-
-#GOTYlogo
-{
-    transform: scale(0.35);
-    filter: invert(80%);
-    position: absolute;
-    top: 40%;
-    right: -15em;
+    top: 45%;
     translate: 0 -50%;
 }
 
@@ -86,9 +136,10 @@ body
 {
     width: 100vw;
     height: 10em;
-    background: linear-gradient( #141414 0%,#00DC97);
+    background: linear-gradient( #141414 80%, #FF8BA6);
     position: absolute;
     z-index: -1;
+    translate: 0 60%;
 }
 
 @keyframes slide {
@@ -102,16 +153,33 @@ body
     }
 }
 
-.imageslider
+.slider
 {
     width: 100vw;
-    height: 15em;
+    height: 15em; 
+    display: flex;
+    translate: 0 40%;
+}
+
+.imageslider
+{
+    width: 100%;
+    height: 100%;
     background: var(--background);
     translate: 0 85%;
-    display: inline-block;
+    display: flex;
     gap: 0.5em;
-    /* animation: 35s slide infinite linear; */
+    animation: 50s slide infinite linear;
     white-space: nowrap;
+    position: relative;
+}
+
+.subslider
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 0.7em;
 }
 
 .imageslider img
