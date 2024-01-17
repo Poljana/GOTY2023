@@ -88,11 +88,12 @@ header
 {
     display: flex;
     align-items: center;
+    position: absolute;
+    right: 0;
     width: 20em;
     height: 2em;
     gap: 2em;
     font-size: 1.5em;
-    translate: 70%;
 }
 
 .navbar a
@@ -106,9 +107,86 @@ header
     transition-timing-function: ease-in;
 }
 
-.navbar a:hover
+.navbar li a:hover
 {
     color: #ffc2d0;
+}
+
+.navicons
+{
+    display: none;
+}
+
+@media only screen and (max-width: 920px)
+{
+    #GOTYlogo,
+    ul.navbar
+    {
+        scale: 0.7;
+    }
+    
+    ul.navbar
+    {
+        right: -3.5em;
+    }
+
+    #GOTYlogo
+    {
+        translate: -40% 0;
+    }
+}
+
+@media only screen and (max-width: 650px)
+{
+    #GOTYlogo
+    {
+        scale: 0.7;
+        translate: -40% 0;
+    }
+    
+    ul.navbar
+    {
+        right: -3.5em;
+        scale: 1;
+    }
+
+    ul.navtext
+    {
+        display: none;
+    }
+
+    ul.navicons 
+    {
+        translate: 0 0.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    ul.navicons 
+    {
+        gap: 1.5em;
+        right: -5.5em;
+    }
+}
+
+@media only screen and (max-width: 430px)
+{
+    #GOTYlogo
+    {
+        scale: 0.7;
+        position: absolute;
+        left: 50%;
+        translate: -50% 0;
+    }
+    
+    ul.navbar
+    {
+        display: none;
+    }
 }
 
 
@@ -125,7 +203,8 @@ header
 
 .container h1.mainheading
 {
-    font-size: 5em;
+    font-size: 6em;
+    word-spacing: 0.1em;
     width: 60%;
     left: 0.5em;
     top: 45%;
@@ -139,7 +218,7 @@ header
     background: linear-gradient( #141414 80%, #FF8BA6);
     position: absolute;
     z-index: -1;
-    translate: 0 60%;
+    translate: 0 90%;
 }
 
 @keyframes slide {
@@ -158,7 +237,8 @@ header
     width: 100vw;
     height: 15em; 
     display: flex;
-    translate: 0 40%;
+    translate: 0 60%;
+    gap: 45px;
 }
 
 .imageslider
@@ -169,8 +249,8 @@ header
     translate: 0 85%;
     display: flex;
     gap: 0.5em;
-    animation: 50s slide infinite linear;
-    white-space: nowrap;
+    animation: 65s slide infinite linear;
+    /* white-space: nowrap; */
     position: relative;
 }
 
@@ -190,4 +270,75 @@ header
     filter: grayscale(70%);
 }
 
+@media only screen and (max-width: 1870px)
+{
+    .container h1.mainheading
+    {
+        font-size: 4.5em;
+    }
+}
 
+@media only screen and (max-width: 1585px)
+{
+    .container h1.mainheading
+    {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1250px)
+{
+    .container h1.mainheading
+    {
+        font-size: 3.5em;
+    }
+}
+
+@media only screen and (max-width: 935px)
+{
+    .container h1.mainheading
+    {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 775px)
+{
+    .container h1.mainheading
+    {
+        text-align: start;
+        font-size: 4em;
+        padding: 0.5em;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 710px)
+{
+    .container h1.mainheading
+    {
+        text-align: start;
+        font-size: 4em;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 565px)
+{
+    .container h1.mainheading
+    {
+        font-size: 3.5em;
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 430px)
+{
+    .container h1.mainheading
+    {
+        font-size: 3em;
+        width: 70%;
+        left: 0.25em;
+        top: 7.25em;
+    }
+}
