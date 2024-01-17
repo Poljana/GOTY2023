@@ -46,7 +46,7 @@ body
     font-size: 5em;
     position: absolute;
     left: 2em;
-    top: 0.25em;
+    top: 50px;
 }
 
 a
@@ -89,6 +89,7 @@ header
     display: flex;
     align-items: center;
     position: absolute;
+    z-index: 2;
     right: 0;
     width: 20em;
     height: 2em;
@@ -116,6 +117,7 @@ header
 {
     display: none;
 }
+
 
 @media only screen and (max-width: 920px)
 {
@@ -196,9 +198,11 @@ header
 
 #frontpage
 {
+    height: 100vh;
     align-items: center;
     justify-content: start;
     text-align: start;
+    margin-bottom: 15em;
 }
 
 .container h1.mainheading
@@ -239,6 +243,7 @@ header
     display: flex;
     translate: 0 60%;
     gap: 45px;
+    z-index: -1;
 }
 
 .imageslider
@@ -342,3 +347,58 @@ header
         top: 7.25em;
     }
 }
+
+
+
+
+/*              SIDEBAR                 */
+
+
+
+.sidebar
+{
+    position: fixed;
+    z-index: 1;
+    margin-top: 5em;
+    width: 20em;
+    height: 100vh;
+    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.sidebar ul
+{
+    width: auto;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 3em;
+}
+
+.sidebar a
+{
+    color: #fffafa;
+}
+
+.sidebar a:hover
+{
+    text-decoration: underline;
+    color: var(--accent);
+}
+
+#sidebartoggle
+{
+    width: 15em;
+    height: 5em;
+    font-size: 0.3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
