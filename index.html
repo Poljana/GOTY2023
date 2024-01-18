@@ -11,6 +11,9 @@
 <body>
 
     <header>
+        <button id="sidebarToggle" onclick="toggleSidebar()">
+            <ion-icon name="ellipsis-vertical-sharp"></ion-icon>
+        </button>
         <img src="Images/The_Game_Awards_logo_2020.svg.png" id="GOTYlogo" alt="">
         <ul class="navbar navtext">
             <li>
@@ -48,59 +51,154 @@
         </ul>
     </header>
 
+    <aside id="sidebar">
+        <ul>
+            <li>
+                <a href="#">
+                    Help
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    About Us
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Legal
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Newsletter
+                </a>
+            </li>
+        </ul>
+        <p id="autor">2024 | Lucijan Pavin</p>
+    </aside>
+
     <main class="container">
         <section class="sekcija" id="frontpage">
-            <h1 class="mainheading">Take a look at some of the top games of <span style="color: #FF8BA6;">2023</span></h1>
+            <h1 class="mainheading">Take a look at some of the top games of <span style="color: #FF8BA6;">2023</span>
+            </h1>
             <div id="highlight"></div>
             <section class="slider">
                 <div class="imageslider">
                     <span class="subslider">
-                        <img src="Images/2077.webp" alt="ok">
-                        <img src="Images/AWake2_10_08_23_002.jpg" alt="ok">
-                        <img src="Images/baldursgate.jpg" alt="ok">
-                        <img src="Images/FF16.avif" alt="ok">
-                        <img src="Images/hifiRush.jpg" alt="ok">
-                        <img src="Images/seaofstarscover.jpg" alt="ok">
-                        <img src="Images/tloztotk.webp" alt="ok">
+                        <img src="Images/Cyber/2077.webp" alt="ok">
+                        <img src="Images/Alan/AWake2_10_08_23_002.jpg" alt="ok">
+                        <img src="Images/Baldur/baldursgate.jpg" alt="ok">
+                        <img src="Images/FF16/FF16.avif" alt="ok">
+                        <img src="Images/HiFi/hifiRush.jpg" alt="ok">
+                        <img src="Images/Stars/seaofstarscover.jpg" alt="ok">
+                        <img src="Images/Zelda/tloztotk.webp" alt="ok">
                     </span>
                 </div>
                 <div class="imageslider">
                     <span class="subslider">
-                        <img src="Images/2077.webp" alt="ok">
-                        <img src="Images/AWake2_10_08_23_002.jpg" alt="ok">
-                        <img src="Images/baldursgate.jpg" alt="ok">
-                        <img src="Images/FF16.avif" alt="ok">
-                        <img src="Images/hifiRush.jpg" alt="ok">
-                        <img src="Images/seaofstarscover.jpg" alt="ok">
-                        <img src="Images/tloztotk.webp" alt="ok">
+                        <img src="Images/Cyber/2077.webp" alt="ok">
+                        <img src="Images/Alan/AWake2_10_08_23_002.jpg" alt="ok">
+                        <img src="Images/Baldur/baldursgate.jpg" alt="ok">
+                        <img src="Images/FF16/FF16.avif" alt="ok">
+                        <img src="Images/HiFi/hifiRush.jpg" alt="ok">
+                        <img src="Images/Stars/seaofstarscover.jpg" alt="ok">
+                        <img src="Images/Zelda/tloztotk.webp" alt="ok">
                     </span>
                 </div>
             </section>
         </section>
         <section class="sekcija">
-            <h1>Game of The Year</h1>
+            <h1>Game of The Year <br>
+                Baldur's Gate <span style="color: #FF8BA6;">3</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Game Direction</h1>
+            <h1>Best Game Direction <br>
+                Alan Wake <span style="color: #FF8BA6;">2</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Ongoing Game</h1>
+            <h1>Best Ongoing Game <br>
+                Cyberpunk <span style="color: #FF8BA6;">2077</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Action/Adventure Game</h1>
+            <h1>Best Action/Adventure Game <br>
+                The Legend Of Zelda: <span style="color: #FF8BA6;">Tears of the Kingdom</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Score/Music</h1>
+            <h1>Best Score/Music <br>
+                Final Fantasy <span style="color: #FF8BA6;">16</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Audio Design</h1>
+            <h1>Best Audio Design <br>
+                Hi-Fi <span style="color: #FF8BA6;">Rush</span>
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Performance</h1>
+            <h1>Best Performance <br>
+                <span style="color: #FF8BA6;">Neil Newbon</span> - Baldur's Gate 3
+            </h1>
         </section>
         <section class="sekcija">
-            <h1>Best Indie Game</h1>
+            <h1>Best Indie Game <br>
+                Sea of <span style="color: #FF8BA6;">Stars</span>
+            </h1>
         </section>
+        <footer>
+            <section id="foot">
+                <p>Lucijan Pavin | 2024</p>
+                <h4>Useful Links</h4>
+                <ul id="usefulLinks">
+                    <li>
+                        <a href="#">
+                            Newsletter
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            FAQ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Email
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Phone
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Help
+                        </a>
+                    </li>
+                </ul>
+                <h4>Social</h4>
+                <ul id="social">
+                    <li>
+                        <a href="#" id="facebook">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="instagram">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" id="twitter">
+                            <ion-icon name="logo-twitter"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </footer>
     </main>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>

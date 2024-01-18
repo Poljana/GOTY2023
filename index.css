@@ -21,19 +21,25 @@ body
     background-color: var(--background);
 }
 
+body::-webkit-scrollbar {
+    width: 0em;
+  }
+
 .container
 {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
+    position: relative;
     overflow-x: hidden;
+    transition: all 0.1s ease;
 }
 
 .sekcija
 {
     width: 100vw;
-    height: 100vh;
+    height: 70em;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -43,9 +49,9 @@ body
 .container h1
 {
     margin: 0px;
-    font-size: 5em;
+    font-size: 4em;
     position: absolute;
-    left: 2em;
+    left: 1em;
     top: 50px;
 }
 
@@ -57,6 +63,105 @@ a
 ul
 {
     list-style: none;
+    padding: 0;
+}
+
+#sidebarToggle
+{
+    width: 2em;
+    height: 2em;
+    font-size: 1.1em;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: #fffafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0.5em;
+    transition: all 0.07s ease-in;
+}
+
+#sidebarToggle:hover
+{
+    background-color: var(--accent);
+}
+
+#sidebarToggle:active
+{
+    background-color: var(--background);
+    scale: 0.9;
+}
+
+aside
+{
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 15em;
+    background: var(--primary);
+    padding-top: 10em;
+    transform: translateX(-15em);
+    transition: all 0.1s ease;    
+}
+
+aside ul
+{
+    width: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 2.5em;
+}
+
+aside a
+{
+    color: #fffafa;
+}
+
+aside a:hover
+{
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+aside a:active
+{
+    color: #ffc2d0;
+    text-decoration: underline;
+}
+
+#autor
+{
+    width: 15em;
+    font-size: 0.65em;
+    color: #8C8C8C;
+    padding-top: 2.5em;
+    border-top: 2px solid var(--secondary);
+    text-align: center;
+    position: absolute;
+    bottom: 20em;
+}
+
+@media only screen and (max-width: 920px)
+{
+    #sidebarToggle
+    {
+        left: 11em;
+    }
+}
+
+@media only screen and (max-width: 430px)
+{
+    #sidebarToggle
+    {
+        left: 0.5em;
+    }
 }
 
 
@@ -73,7 +178,7 @@ header
     align-items: center;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     background: var(--primary);
 }
 
@@ -89,7 +194,7 @@ header
     display: flex;
     align-items: center;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     right: 0;
     width: 20em;
     height: 2em;
@@ -159,7 +264,7 @@ header
 
     ul.navicons 
     {
-        translate: 0 0.2em;
+        translate: 1em 0.2em;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -356,3 +461,89 @@ header
 }
 
 
+
+
+/*             LISTA IGRI              */
+
+
+
+
+
+
+
+
+
+/*              FOOTER                   */
+
+
+
+footer
+{
+    width: 100%;
+    height: 20em;
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#foot
+{
+    width: 100em;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15em;
+    border-top: 3px solid var(--secondary);
+}
+
+footer p
+{
+    color: var(--secondary);
+    text-wrap: nowrap;
+}
+
+footer ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+}
+
+#usefulLinks
+{
+    height: 4em;
+    flex-wrap: wrap;
+    gap: 1em;
+    translate: -10em;
+}
+
+#usefulLinks a
+{
+    color: var(--secondary);
+}
+
+#social
+{
+    flex-direction: row;
+    gap: 2em;
+}
+
+#social
+{
+    font-size: 1.75em;
+    translate: -5em;
+}
+
+#social a
+{
+    color: var(--secondary);
+}
+
+#foot a:hover 
+{
+    color: #ffc2d0;
+    text-decoration: underline;
+}
