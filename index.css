@@ -81,11 +81,13 @@ ul
     position: absolute;
     left: 0.5em;
     transition: all 0.07s ease-in;
+    transition: cursor 0s none;
 }
 
 #sidebarToggle:hover
 {
     background-color: var(--accent);
+    cursor: pointer;
 }
 
 #sidebarToggle:active
@@ -213,9 +215,14 @@ header
     transition-timing-function: ease-in;
 }
 
-.navbar li a:hover
+.navbar a:hover
 {
     color: #ffc2d0;
+}
+
+.navbar a:active
+{
+    color: var(--accent);
 }
 
 .navicons
@@ -253,8 +260,9 @@ header
     
     ul.navbar
     {
-        right: -3.5em;
+        right: 1em;
         scale: 1;
+        width: 9em;
     }
 
     ul.navtext
@@ -276,7 +284,7 @@ header
     ul.navicons 
     {
         gap: 1.5em;
-        right: -5.5em;
+        right: 0.5em;
     }
 }
 
@@ -481,6 +489,7 @@ footer
 {
     width: 100%;
     height: 20em;
+    background: linear-gradient(to top, #0e0e0e 50%, #141414);
     position: static;
     display: flex;
     justify-content: center;
@@ -497,6 +506,12 @@ footer
     align-items: center;
     gap: 15em;
     border-top: 3px solid var(--secondary);
+    transition: all 0.1s ease;
+}
+
+#foot h4
+{
+    translate: 4em;
 }
 
 footer p
@@ -517,7 +532,7 @@ footer ul
     height: 4em;
     flex-wrap: wrap;
     gap: 1em;
-    translate: -10em;
+    translate: -6em;
 }
 
 #usefulLinks a
@@ -529,12 +544,8 @@ footer ul
 {
     flex-direction: row;
     gap: 2em;
-}
-
-#social
-{
     font-size: 1.75em;
-    translate: -5em;
+    translate: -4em;
 }
 
 #social a
@@ -546,4 +557,122 @@ footer ul
 {
     color: #ffc2d0;
     text-decoration: underline;
+}
+
+@media only screen and (max-width: 1900px)
+{
+    #foot
+    {
+        width: 80em;
+        gap: 8em;
+    }
+
+    #social
+    {
+        translate: 0;
+    }    
+
+    #usefulLinks
+    {
+        translate: -2em;
+    }
+}
+
+@media only screen and (max-width: 1500px)
+{
+    #foot
+    {
+        width: 65em;
+        gap: 7em;
+    }
+}
+
+@media only screen and (max-width: 1260px)
+{
+    #foot
+    {
+        width: 50em;
+        gap: 6.5em;
+    }
+
+    footer
+    {
+        height: 30em;
+        padding-bottom: 5.5em;
+    }
+
+    #usefulLinks
+    {
+        flex-wrap: nowrap;
+    }
+
+    #social
+    {
+        flex-direction: column;
+        gap: 1.1em;
+        translate: -0.75em 2.5em;
+    }
+}
+
+@media only screen and (max-width: 970px)
+{
+    #foot
+    {
+        width: 40em;
+        gap: 3em;
+    }
+
+    #foot h4 
+    {
+        translate: 4em -5em;
+        width: 3em;
+    }
+}
+
+@media only screen and (max-width: 750px)
+{
+    #foot
+    {
+        width: 30em;
+        gap: 1.5em;
+    }
+
+    #usefulLinks
+    {
+        translate: -9.25em -2em;
+    }
+
+    #social
+    {
+        translate: -4.8em 1em;
+    }
+
+    #foot h4
+    {
+        translate: -4em -6em;
+        width: 4em;
+    }
+
+    #foot p 
+    {
+        translate: 10em 15em;
+    }
+}
+
+@media only screen and (max-width: 580px)
+{
+    #foot
+    {
+        width: 25em;
+        gap: 2.1em;
+    }
+}
+
+@media only screen and (max-width: 460px)
+{
+    #foot
+    {
+        width: 17em;
+        gap: 1.9em;
+    }
 }
