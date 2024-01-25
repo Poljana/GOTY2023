@@ -1,8 +1,8 @@
 
 
-function toggleSidebar() {
+function toggleDrawer() {
     
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = document.getElementById('drawer');
     const container = document.querySelector('.container');
     const sidebarWidth = sidebar.offsetWidth;
 

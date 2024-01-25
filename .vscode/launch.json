@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "C:\\Users\\Pavin\\OneDrive\\Radna površina\\I\\GOTY2023\\index.html",
+            "url": "C:\\Users\\Pavin\\OneDrive\\Radna površina\\I\\GOTY2023_project\\GOTY2023\\index.html",
             "webRoot": "${workspaceFolder}"
         }
     ]
