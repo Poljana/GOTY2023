@@ -314,6 +314,7 @@ header
     justify-content: start;
     text-align: start;
     margin-bottom: 15em;
+    margin-top: 0em;
 }
 
 .hidden
@@ -482,6 +483,7 @@ header
     justify-content: start;
     align-items: start;
     position: relative;
+    margin-top: 15em;
 }
 
 .sekcija--flexwrap
@@ -522,7 +524,65 @@ header
     width: 35%;
     flex-grow: 0.8;
     margin-top: 20em;
-    background: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hide
+{
+    .game-image
+    {
+        translate: 100% 0%;
+        filter: blur(2em);
+        opacity: 0;
+    }
+}
+
+.show
+{
+    .game-image
+    {
+        translate: 0% 0%;
+        filter: blur(0em);
+        opacity: 1;
+    }
+}
+
+.game-image
+{
+    width: 30em;
+    height: 20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    box-shadow: 0.75em 0.75em 2em #000;
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+}
+
+.game-image img
+{
+    height: 20em;   
+    filter: brightness(0.85); 
+}
+
+.game-image:nth-child(1)
+{
+    transform: translateX(-20%);
+}
+
+.game-image:nth-child(2)
+{
+    transition-delay: 300ms;
+}
+
+.game-image:nth-child(3)
+{
+    transform: translateX(20%);
+    transition-delay: 600ms;
 }
 
 

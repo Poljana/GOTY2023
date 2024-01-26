@@ -21,3 +21,35 @@ function toggleDrawer() {
     }
 
 }
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach((entry) => {
+
+        console.log(entry);
+        if (entry.isIntersecting) {
+
+            entry.target.classList.remove('hide');
+            entry.target.classList.add('show');
+
+        } else {
+
+            entry.target.classList.remove('show');
+            entry.target.classList.add('hide');
+
+        }
+
+    })
+
+}, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+});
+
+const imageLibrary = document.querySelectorAll('.image-library');
+
+imageLibrary.forEach(library => {
+    observer.observe(library);
+})
+
