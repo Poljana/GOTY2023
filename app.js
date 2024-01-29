@@ -34,6 +34,37 @@ window.addEventListener('DOMContentLoaded', function () {
 
 })
 
+
+//main heading letters change color uppon hover
+const mainHeading = document.querySelector('.mainheading');
+const letters = mainHeading.textContent.split('');
+mainHeading.innerHTML = ''; 
+
+letters.forEach(letter => {
+
+    const span = document.createElement('span');
+    span.textContent = letter;
+    span.style.transition = 'color 0.5s linear';
+    span.style.color = 'inherit';
+
+    span.addEventListener('pointerover', function() {
+
+        const originalColor = this.style.color || window.getComputedStyle(this).color;
+        this.style.color = '#FF8BA6';
+        this.style.cursor = 'default';
+        setTimeout(() => {
+            
+            this.style.color = originalColor;
+            
+        },  1000);
+
+    });
+
+    mainHeading.appendChild(span);
+
+});
+
+
 //infinite image library carousel animation
 const copy = document.querySelector('.subslider').cloneNode(true);
 document.querySelector('.slider').appendChild(copy);
@@ -51,7 +82,35 @@ carousel.animate(
     }
 );
 
+
 //on/off button for a drawer
+//could've styled in CSS but chose this way instead
+const drawerToggleBtn = document.getElementById('drawerToggle');
+
+drawerToggleBtn.addEventListener('pointerover', function() {
+
+    this.style.backgroundColor = 'var(--accent)';
+    this.style.cursor = 'pointer';
+
+});
+drawerToggleBtn.addEventListener('pointerleave', function() {
+
+    this.style.backgroundColor = 'transparent';
+
+});
+drawerToggleBtn.addEventListener('pointerdown', function() {
+
+    this.style.backgroundColor = 'var(--background)';
+    this.style.scale = '0.9';
+
+});
+drawerToggleBtn.addEventListener('pointerup', function() {
+
+    this.style.backgroundColor = 'transparent';
+    this.style.scale = '1';
+
+});
+
 function toggleDrawer() {
     
     const sidebar = document.getElementById('drawer');
@@ -70,9 +129,10 @@ function toggleDrawer() {
         container.style.transform = `translateX(${sidebarWidth}px)`;
         container.style.filter = 'brightness(0.7)';
     
-    }
+    };
 
-}
+};
+
 
 //observer for loading images in with animations
 const observer = new IntersectionObserver(entries => {
@@ -105,5 +165,31 @@ const imageLibrary = document.querySelectorAll('.image-library');
 
 imageLibrary.forEach(library => {
     observer.observe(library);
-})
+});
+
+//rotating social links on hover
+const facebook = document.getElementById('facebook');
+const instagram = document.getElementById('instagram');
+const twitter = document.getElementById('twitter');
+
+const social = [facebook, instagram, twitter];
+
+social.forEach(link => {
+
+    link.addEventListener('pointerover', function() {
+
+        this.animate(
+            [
+                {transform: 'rotateY(0deg)'},
+                {transform: 'rotateY(180deg)'},
+                {transform: 'rotateY(0deg)'}
+            ],
+            {
+                duration: 250
+            }  
+        );
+
+    });
+
+});
 
