@@ -1,6 +1,6 @@
 
 
-//intro animation when DOM content loads
+//*intro animation when DOM content loads
 const intro = document.querySelector('.intro');
 const logo = document.querySelectorAll('.logo');
 
@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', function () {
 })
 
 
-//main heading letters change color uppon hover
+//*main heading letters change color uppon hover
 const mainHeading = document.querySelector('.mainheading');
 const letters = mainHeading.textContent.split('');
 mainHeading.innerHTML = ''; 
@@ -65,7 +65,7 @@ letters.forEach(letter => {
 });
 
 
-//infinite image library carousel animation
+//*infinite image library carousel animation
 const copy = document.querySelector('.subslider').cloneNode(true);
 document.querySelector('.slider').appendChild(copy);
 
@@ -83,7 +83,7 @@ carousel.animate(
 );
 
 
-//on/off button for a drawer
+//*on/off button for a drawer
 //could've styled in CSS but chose this way instead
 const drawerToggleBtn = document.getElementById('drawerToggle');
 
@@ -134,7 +134,7 @@ function toggleDrawer() {
 };
 
 
-//observer for loading images in with animations
+//*observer for loading images in with animations
 const observer = new IntersectionObserver(entries => {
 
     entries.forEach((entry) => {
@@ -167,7 +167,7 @@ imageLibrary.forEach(library => {
     observer.observe(library);
 });
 
-//rotating social links on hover
+//*rotating social links on hover
 const facebook = document.getElementById('facebook');
 const instagram = document.getElementById('instagram');
 const twitter = document.getElementById('twitter');
