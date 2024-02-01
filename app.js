@@ -46,17 +46,21 @@ letters.forEach(letter => {
     span.textContent = letter;
     span.style.transition = 'color 0.5s linear';
     span.style.color = 'inherit';
+    const originalColor = span.style.color || window.getComputedStyle(span).color;
 
     span.addEventListener('pointerover', function() {
 
-        const originalColor = this.style.color || window.getComputedStyle(this).color;
         this.style.color = '#FF8BA6';
         this.style.cursor = 'default';
+
+    });
+    span.addEventListener('pointerleave', function() {
+
         setTimeout(() => {
             
             this.style.color = originalColor;
             
-        },  1000);
+        },  1250);
 
     });
 
