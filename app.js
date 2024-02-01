@@ -7,11 +7,11 @@ const logo = document.querySelectorAll('.logo');
 window.addEventListener('DOMContentLoaded', function () {
 
     setTimeout(() => {
-        
+
         logo.forEach((logo, index) => {
 
             setTimeout(() => {
-                
+
                 logo.classList.add('active');
 
             }, (index + 1) * 400);
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
 
         intro.style.opacity = '0';
-        
+
     }, 2600);
 
     setTimeout(() => {
@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
 //*main heading letters change color uppon hover
 const mainHeading = document.querySelector('.mainheading');
 const letters = mainHeading.textContent.split('');
-mainHeading.innerHTML = ''; 
+mainHeading.innerHTML = '';
 
 letters.forEach(letter => {
 
@@ -48,19 +48,19 @@ letters.forEach(letter => {
     span.style.color = 'inherit';
     const originalColor = span.style.color || window.getComputedStyle(span).color;
 
-    span.addEventListener('pointerover', function() {
+    span.addEventListener('pointerover', function () {
 
         this.style.color = '#FF8BA6';
         this.style.cursor = 'default';
 
     });
-    span.addEventListener('pointerleave', function() {
+    span.addEventListener('pointerleave', function () {
 
         setTimeout(() => {
-            
+
             this.style.color = originalColor;
-            
-        },  1250);
+
+        }, 750);
 
     });
 
@@ -75,10 +75,10 @@ document.querySelector('.slider').appendChild(copy);
 
 const carousel = document.querySelector('.slider');
 
-carousel.animate(
+const carouselAnimation = carousel.animate(
     [
-        {transform: 'translateX(0) translateY(145%)'},
-        {transform: 'translateX(-100%) translateY(145%)'},
+        { transform: 'translateX(0) translateY(145%)' },
+        { transform: 'translateX(-100%) translateY(145%)' },
     ],
     {
         duration: 50000,
@@ -91,24 +91,24 @@ carousel.animate(
 //could've styled in CSS but chose this way instead
 const drawerToggleBtn = document.getElementById('drawerToggle');
 
-drawerToggleBtn.addEventListener('pointerover', function() {
+drawerToggleBtn.addEventListener('pointerover', function () {
 
     this.style.backgroundColor = 'var(--accent)';
     this.style.cursor = 'pointer';
 
 });
-drawerToggleBtn.addEventListener('pointerleave', function() {
+drawerToggleBtn.addEventListener('pointerleave', function () {
 
     this.style.backgroundColor = 'transparent';
 
 });
-drawerToggleBtn.addEventListener('pointerdown', function() {
+drawerToggleBtn.addEventListener('pointerdown', function () {
 
     this.style.backgroundColor = 'var(--background)';
     this.style.scale = '0.9';
 
 });
-drawerToggleBtn.addEventListener('pointerup', function() {
+drawerToggleBtn.addEventListener('pointerup', function () {
 
     this.style.backgroundColor = 'transparent';
     this.style.scale = '1';
@@ -116,7 +116,7 @@ drawerToggleBtn.addEventListener('pointerup', function() {
 });
 
 function toggleDrawer() {
-    
+
     const sidebar = document.getElementById('drawer');
     const container = document.querySelector('.container');
     const sidebarWidth = sidebar.offsetWidth;
@@ -132,7 +132,7 @@ function toggleDrawer() {
         sidebar.style.transform = 'translateX(0em)';
         container.style.transform = `translateX(${sidebarWidth}px)`;
         container.style.filter = 'brightness(0.7)';
-    
+
     };
 
 };
@@ -144,7 +144,7 @@ const observer = new IntersectionObserver(entries => {
     entries.forEach((entry) => {
 
         console.log(entry);
-        
+
         if (entry.isIntersecting) {
 
             entry.target.classList.remove('hide');
@@ -180,17 +180,17 @@ const social = [facebook, instagram, twitter];
 
 social.forEach(link => {
 
-    link.addEventListener('pointerover', function() {
+    link.addEventListener('pointerover', function () {
 
         this.animate(
             [
-                {transform: 'rotateY(0deg)'},
-                {transform: 'rotateY(180deg)'},
-                {transform: 'rotateY(0deg)'}
+                { transform: 'rotateY(0deg)' },
+                { transform: 'rotateY(180deg)' },
+                { transform: 'rotateY(0deg)' }
             ],
             {
                 duration: 250
-            }  
+            }
         );
 
     });
